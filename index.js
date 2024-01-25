@@ -27,7 +27,7 @@ app.use((req, res) => {
 });
 
 // 4. Specify port.
-app.listen(3100, () => {
+app.listen(process.env.PORT, () => {
   connectUsingMongoose();
-  console.log("Server is running at 3100");
+  console.log(`Server is running at ${process.env.PORT}`);
 });
